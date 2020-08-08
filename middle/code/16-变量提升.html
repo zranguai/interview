@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 变量提升 / 预处理
+    /*
+      - js引擎在代码正式执行之前会做一个预处理的工作
+        1.收集变量
+        2.收集函数
+        依据：
+          var 将var后边的变量定义但是不赋值
+          function(){} 提前定义该函数
+    */
+  console.log(username); // 答案：undefined
+  var username = 'kobe'
+  fun(); // 答案： 正常执行函数
+  function fun(){
+    console.log('fun()');
+  }
+
+  // 执行上下文
+  /*
+  *   1.执行上下文（execute context）EC
+  *   2.理解： 代码执行的环境
+  *   3.时机： 代码正式执行之前会进入到执行环境
+  *   4.工作：
+  *     1.创建变量对象
+  *       1) 变量
+  *       2) 函数及函数的参数
+  *     2.确认this的指向
+  *       1)全局： this -> window
+  *       2)局部： this -> 调用其的对象
+  *     3.创建作用域链
+  *       父级作用域链 + 当前变量对象
+  */
+  </script>
+</body>
+</html>
